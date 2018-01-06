@@ -1,5 +1,5 @@
 # MenuMusicMod-Creator
-Python project to create MenuMusicMods for Payday 2.
+Python project to create MenuMusicMods (require [BeardLib](https://github.com/simon-wh/PAYDAY-2-BeardLib)) for Payday 2.
 
 ## How to
 - Get your music into the [correct format](#getting-music-into-the-correct-format).
