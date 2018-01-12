@@ -5,12 +5,12 @@ import re
 from appJar import gui
 
 #set working directory for appJar icon
-if getattr( sys, 'frozen', False ) :
+if getattr( sys, 'frozen', False ):
         os.chdir(sys._MEIPASS)
-else :
+        dir_path = os.path.dirname(os.path.abspath(sys.executable))
+else:
         os.chdir(os.path.dirname(os.path.abspath(__file__)))
-
-dir_path = os.path.dirname(os.path.abspath(__file__))
+        dir_path = os.path.dirname(os.path.abspath(__file__))
 
 # return object class for create_folders()
 class modloc(object):
