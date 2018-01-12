@@ -3,8 +3,8 @@ import shutil
 import re
 from appJar import gui
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-
+dir_path = os.path.dirname(os.path.abspath(__file__))
+os.chdir(dir_path)
 
 # return object class for create_folders()
 class modloc(object):
@@ -23,7 +23,7 @@ def create_folders(root, name):
 
 
 def move_file(modloc, musicfile):
-    # move music file to modroot/Assets/music/musicname/
+    # move music.movie to modroot/Assets/music/musicname/
     shutil.copy2(musicfile, modloc.music)
     return
 
