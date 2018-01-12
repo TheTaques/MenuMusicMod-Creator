@@ -1,10 +1,16 @@
 import os
+import sys
 import shutil
 import re
 from appJar import gui
 
+#set working directory for appJar icon
+if getattr( sys, 'frozen', False ) :
+        os.chdir(sys._MEIPASS)
+else :
+        os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 dir_path = os.path.dirname(os.path.abspath(__file__))
-os.chdir(dir_path)
 
 # return object class for create_folders()
 class modloc(object):
@@ -143,7 +149,7 @@ def makeithappen_super(button_name):
 # -----------------GUI-----------------
 # create gui and set title
 app = gui('MenuMusicMod Creator', '650x150')
-app.setIcon('mmmc.ico')
+app.setIcon('mmmc.gif')
 app.setFont('10', font='Verdana')
 
 # add labels and entries to gui
